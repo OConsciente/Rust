@@ -1,0 +1,25 @@
+# Primeiro Hello, world!
+
+fn main() {
+    println!("Hello, world!");
+}
+
+# Simple Guessing Game
+
+use std::io;
+
+fn main() {
+    println!("Guess the number!"); // Funciona como o print do Python
+
+    println!("Please input your guess.");
+
+    let mut guess = String::new(); // Recebe uma string mutável. É uma variável que recebe string.
+
+    io::stdin() // Chamamos a função stdin da biblioteca io
+        .read_line(&mut guess) // Chamamos o método read_line que nos ajuda a lidar com a variavel mutavel guess
+        .expect("Failed to read line"); // Caso dê erro , essa é a resposta.
+
+    println!("You guessed: {}", guess); // Se tudo der certo. Mostra o número que você enviou.
+}
+
+# 
